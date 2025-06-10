@@ -1,0 +1,93 @@
+#wrap,
+#container,
+#content,
+#footer {
+    width: 100%;
+}
+/* 공통 */
+.inner {
+    margin: auto;
+    position: relative;
+    box-sizing: border-box;
+}
+#header {
+    width: 1740px;
+    background: #fff;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+#header.on {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+#header .inner {
+    height: 90px;
+    width: 1160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header h1 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    /* inner 사이즈 안바뀐다는 전제하에 top 50% */
+    transform: translateY(-50%);
+}
+#header .inner .nav .util {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+#header .util ul {
+    display: flex;
+    gap: 25px;
+}
+#header .util ul li a {
+    font-size: 13px;
+}
+#header .util ul li:first-child a {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#header .util p {
+    font-size: 32px;
+}
+#header .nav {
+}
+#header .nav .gnb {
+    display: flex;
+    margin-left: 100px;
+}
+#header .nav .gnb > li {
+}
+#header .nav .gnb > li > a {
+    display: block;
+    width: 200px;
+    height: 90px;
+    display: flex;
+    justify-content: conter;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+#header .nav .gnb > li ul {
+    display: none;
+}
+
+.bg {
+    display: none;
+}
+.sitemap {
+    display: none;
+}

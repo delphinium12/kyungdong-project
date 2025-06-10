@@ -1,0 +1,309 @@
+#mainVisual {
+    width: 100%;
+    height: 1080px;
+    position: relative;
+}
+#mainVisual .mainBanner {
+    width: 100%;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+    /* 스크롤바 숨김 */
+}
+#mainVisual .mainBanner li {
+    width: 100%;
+    height: 1080px;
+    position: absolute;
+    left: 100%;
+    /*스크롤바생김*/
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+}
+#mainVisual .mainBanner li:nth-child(1) {
+    left: 0;
+    background-image: url(../images/main01_pc.jpg);
+}
+#mainVisual .mainBanner li:nth-child(2) {
+    background-image: url(../images/main02_pc.jpg);
+}
+#mainVisual .mainBanner li:nth-child(3) {
+    background-image: url(../images/main03_pc.jpg);
+}
+#mainVisual .mainBanner li:nth-child(4) {
+    background-image: url(../images/main04_pc.jpg);
+}
+#mainVisual .mainBanner li .inner {
+    width: 1160px;
+    height: 1080px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* li에서 flex해서 align-items로 정렬해도 됨 */
+}
+#mainVisual .mainBanner li h2 {
+    font-size: 46px;
+    color: #fff;
+}
+#mainVisual .mainBanner li h2 span {
+}
+#mainVisual .mainBanner li h2 + p {
+}
+#mainVisual .mainBanner li h2 + p span {
+    font-size: 22px;
+    color: #fff;
+}
+#mainVisual .mainBanner li .more {
+}
+#mainVisual .btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70px;
+    height: 70px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background: transparent;
+}
+#mainVisual .btn i {
+    font-size: 30px;
+    color: #fff;
+}
+#mainVisual .prev {
+    left: 100px;
+}
+#mainVisual .next {
+    right: 100px;
+}
+#mainVisual .btn .mouse {
+}
+
+.main .con1 .inner,
+.main .con2 .inner {
+    padding: 120px 0;
+}
+.main .con1 .more a,
+.main .con2 .more a {
+    display: inline-block;
+    width: 180px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid #000;
+    line-height: 50px;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.main .con1 .more a::before,
+.main .con2 .more a::before {
+    content: '';
+    width: 220px;
+    height: 70px;
+    background: #17469d;
+    position: absolute;
+    left: -230px;
+    top: -10px;
+    transition: 0.5s;
+    transform: skewX(-15deg);
+    z-index: 10;
+}
+.main .con1 .more a:hover:before,
+.main .con2 .more a:hover::before {
+    left: -10px;
+}
+.main .con1 .more a:hover,
+.main .con2 .more a:hover {
+    border-color: #17469d;
+}
+.main .con1 .more a span,
+.main .con2 .more a span {
+    position: relative;
+    z-index: 20;
+}
+.main .con1 .more a:hover span,
+.main .con2 .more a:hover span {
+    color: #fff;
+}
+
+/* 그룹선택자 */
+.main .con1 .more,
+.main .con2 .more {
+    text-align: center;
+}
+
+.main .con3 .more,
+.main .con4 .more {
+}
+.main .con3 .more a,
+.main .con4 .more a {
+    display: inline-block;
+    width: 180px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid #fff;
+    line-height: 50px;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.main .con3 .more a::before,
+.main .con4 .more a::before {
+    content: '';
+    width: 220px;
+    height: 70px;
+    background: #fff;
+    position: absolute;
+    left: -230px;
+    top: -10px;
+    transition: 0.5s;
+    transform: skewX(-15deg);
+    z-index: 10;
+}
+.main .con3 .more a:hover:before,
+.main .con4 .more a:hover::before {
+    left: -10px;
+}
+.main .con3 .more a:hover span,
+.main .con4 .more a:hover span {
+    color: #07255d;
+}
+.main .con1 .more a:hover,
+.main .con2 .more a:hover {
+    border-color: #07255d;
+}
+
+.main .con1 {
+}
+.main .con1 h2 {
+    font-size: 43px;
+    text-align: center;
+    margin-bottom: 6px;
+}
+.main .con1 h2 + p {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 50px;
+}
+.main .con1 ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.main .con1 ul li {
+    width: 270px;
+}
+.main .con1 ul li a {
+}
+.main .con1 ul li a div {
+    width: 270px;
+    height: 365px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.main .con1 ul li a div img {
+    width: 100%;
+    transition: 0.7s;
+}
+.main .con1 ul li a div:hover img {
+    transform: scale(1.1);
+}
+.main .con1 ul li a h3 {
+    font-size: 20px;
+    margin: 15px 0;
+    border-bottom: 1px solid #999;
+    padding-bottom: 15px;
+}
+.main .con1 ul li a h3 span {
+    display: block;
+}
+.main .con1 ul li a p {
+    font-size: 15px;
+    color: #676767;
+    word-break: keep-all;
+}
+
+.main .con2 {
+    position: relative;
+}
+.main .con2::after {
+    content: '';
+    width: 100%;
+    height: 50%;
+    background: #f6f6f6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* con2 배경이미지나 색이 없을경우 가능 */
+    z-index: -10;
+}
+.main .con2 h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 43px;
+    text-align: center;
+}
+.main .con2 ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.main .con2 ul li {
+    width: 580px;
+}
+.main .con2 ul li a {
+    display: block;
+    /* 사이즈 들어가야해서 */
+    width: 580px;
+    height: 547px;
+    overflow: hidden;
+    position: relative;
+}
+.main .con2 ul li a > img {
+    transition: 0.5s;
+}
+.main .con2 ul li a:hover > img {
+    transform: scale(1.1);
+}
+.main .con2 ul li a .txt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+.main .con2 ul li a .txt strong {
+    font-size: 28px;
+}
+.main .con2 ul li a .txt h3 {
+    font-size: 43px;
+    margin-bottom: 35px;
+}
+.main .con2 ul li a .txt span {
+}
+.main .con2 ul li a + p {
+    font-size: 17px;
+    color: #676767;
+    margin: 25px 0 20px 0;
+    text-align: center;
+}
+
+.main .con3 {
+    position: relative;
+}
+.main .con3::after {
+    content: '';
+    display: block;
+    width: 40%;
+    /* height: 100vh; */
+    height: 100%;
+    background: #07255d;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -10;
+}
