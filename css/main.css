@@ -79,12 +79,13 @@
 #mainVisual .btn .mouse {
 }
 
-.main .con1 .inner,
-.main .con2 .inner {
+.main .content1 .inner {
     padding: 120px 0;
 }
-.main .con1 .more a,
-.main .con2 .more a {
+.main .content1 .more {
+    text-align: center;
+}
+.main .content1 .more a {
     display: inline-block;
     width: 180px;
     height: 50px;
@@ -95,8 +96,7 @@
     position: relative;
     overflow: hidden;
 }
-.main .con1 .more a::before,
-.main .con2 .more a::before {
+.main .content1 .more a::before {
     content: '';
     width: 220px;
     height: 70px;
@@ -108,35 +108,27 @@
     transform: skewX(-15deg);
     z-index: 10;
 }
-.main .con1 .more a:hover:before,
-.main .con2 .more a:hover::before {
+.main .content1 .more a:hover::before {
     left: -10px;
 }
-.main .con1 .more a:hover,
-.main .con2 .more a:hover {
+.main .content1 .more a:hover {
     border-color: #17469d;
 }
-.main .con1 .more a span,
-.main .con2 .more a span {
+.main .content1 .more a span {
     position: relative;
     z-index: 20;
 }
-.main .con1 .more a:hover span,
-.main .con2 .more a:hover span {
+
+.main .content1 .more a:hover span {
     color: #fff;
 }
 
 /* 그룹선택자 */
-.main .con1 .more,
-.main .con2 .more {
-    text-align: center;
+
+.main .content2 .more {
 }
 
-.main .con3 .more,
-.main .con4 .more {
-}
-.main .con3 .more a,
-.main .con4 .more a {
+.main .content2 .more a {
     display: inline-block;
     width: 180px;
     height: 50px;
@@ -148,8 +140,7 @@
     overflow: hidden;
 }
 
-.main .con3 .more a::before,
-.main .con4 .more a::before {
+.main .content2 .more a::before {
     content: '';
     width: 220px;
     height: 70px;
@@ -161,17 +152,21 @@
     transform: skewX(-15deg);
     z-index: 10;
 }
-.main .con3 .more a:hover:before,
-.main .con4 .more a:hover::before {
+
+.main .content2 .more a:hover::before {
     left: -10px;
+    z-index: 10;
 }
-.main .con3 .more a:hover span,
-.main .con4 .more a:hover span {
+
+.main .content2 .more a span {
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    position: relative;
+}
+.main .content2 .more a:hover span {
     color: #07255d;
-}
-.main .con1 .more a:hover,
-.main .con2 .more a:hover {
-    border-color: #07255d;
+    z-index: 20;
 }
 
 .main .con1 {
@@ -298,7 +293,7 @@
 .main .con3::after {
     content: '';
     display: block;
-    width: 40%;
+    width: 43.8%;
     /* height: 100vh; */
     height: 100%;
     background: #07255d;
@@ -306,4 +301,197 @@
     left: 0;
     top: 0;
     z-index: -10;
+}
+
+.main .con3 .inner {
+    height: 1080px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1160px;
+}
+.main .con3 .public {
+    width: 450px;
+    color: #fff;
+}
+.main .con3 .public strong {
+    font-size: 25px;
+    font-weight: 100;
+}
+.main .con3 .public h2 {
+    font-size: 43px;
+    margin-bottom: 30px;
+}
+.main .con3 .public h2 + p {
+    font-weight: 100;
+    font-size: 17px;
+    width: 400px;
+    word-break: keep-all;
+    margin-bottom: 50px;
+}
+
+.main .con3 ul {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.main .con3 ul li {
+    margin-bottom: 35px;
+}
+.main .con3 ul li a div {
+    width: 275px;
+    height: 180px;
+    overflow: hidden;
+}
+.main .con3 ul li a img {
+    width: 100%;
+    height: 180px;
+    transition: 0.5s;
+}
+.main .con3 ul li a:hover img {
+    transform: scale(1.1);
+}
+.main .con3 ul li strong {
+    font-size: 17px;
+    display: block;
+    /* inline이라서 block 처리 해야함 */
+    margin-top: 10px;
+}
+
+.main .con4 {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url(../images/main_foot_bg.jpg);
+}
+.main .con4 .inner {
+    width: 1160px;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main .con4 .about {
+}
+.main .con4 .about h2 {
+    font-size: 43px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.main .con4 .inner .about h2 span {
+    display: block;
+    font-weight: 100;
+}
+.main .con4 .about h2 + p {
+    font-size: 17px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+.main .con4 ul {
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+.main .con4 ul li a {
+    /* inline이어서 내용이 들어간 것만 인식함 */
+    width: 220px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main .con4 ul li:nth-child(1) a {
+    background: rgba(244, 104, 17, 0.6);
+}
+.main .con4 ul li:nth-child(2) a {
+    background: rgba(14, 52, 179, 0.6);
+}
+.main .con4 ul li:nth-child(3) a {
+    background: rgba(15, 41, 88, 0.6);
+}
+.main .con4 ul li a span {
+    display: block;
+    width: 55px;
+    height: 50px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.main .con4 ul li a span img {
+}
+.main .con4 ul li a strong {
+    font-size: 19px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+.main .con4 ul li a em {
+    font-size: 15px;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.menu {
+    position: fixed;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.menu ul {
+}
+.menu ul::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 85%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.menu ul li {
+    font-size: 15px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.menu ul li::before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #07255d;
+    left: 0;
+    top: 50%;
+    transform: translate(-45%, -50%);
+    position: absolute;
+    z-index: 10;
+}
+.menu ul li.on::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #07255d;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-48%, -50%);
+}
+.menu ul li a {
+    display: block;
+    padding-left: 20px;
+    color: #07255d;
+    opacity: 0.7;
+}
+.menu ul li.on a {
+    opacity: 1;
+}
+.menu ul li:last-child {
+    margin-bottom: 0;
 }

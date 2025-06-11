@@ -85,9 +85,64 @@
     display: none;
 }
 
+#footer {
+    background: #131313;
+}
+#footer .inner {
+    width: 1160px;
+    padding: 50px 0;
+    color: #fff;
+}
+#footer .inner p {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.top {
+    position: fixed;
+    right: 10%;
+    bottom: 30px;
+}
+
 .bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    opacity: 0.6;
     display: none;
 }
 .sitemap {
-    display: none;
+    position: fixed;
+    width: 960px;
+    height: 530px;
+    background: #fff;
+    left: 50%;
+    top: 50%;
+    z-index: 80;
+    transform: translate(-50%);
+    border-top: 2px solid #07255d;
+}
+
+.sitemap .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+.sitemap .close i {
+    color: #07255d;
+    font-size: 25px;
+}
+.sitemap .site-gnb li a {
+    font-size: 18px;
+    color: #07255d;
+    border-bottom: 1px solid #07255d;
+}
+.sitemap .site-gnb ul li a {
+    font-size: 14px;
+    color: #07255d;
 }
