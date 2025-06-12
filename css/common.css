@@ -1,3 +1,6 @@
+#wrap {
+    min-width: 1600px;
+}
 #wrap,
 #container,
 #content,
@@ -22,8 +25,10 @@
 #header.on {
     width: 100%;
     position: fixed;
+    transform: translateX(0);
     left: 0;
     top: 0;
+    background-color: #bfc6d4;
 }
 #header .inner {
     height: 90px;
@@ -102,8 +107,11 @@
     position: fixed;
     right: 10%;
     bottom: 30px;
+    display: none;
 }
-
+.top.on {
+    display: block;
+}
 .bg {
     position: fixed;
     width: 100%;
@@ -115,6 +123,9 @@
     opacity: 0.6;
     display: none;
 }
+.bg.on {
+    display: block;
+}
 .sitemap {
     position: fixed;
     width: 960px;
@@ -125,6 +136,10 @@
     z-index: 80;
     transform: translate(-50%);
     border-top: 2px solid #07255d;
+    display: none;
+}
+.sitemap.on {
+    display: block;
 }
 
 .sitemap .close {

@@ -45,16 +45,29 @@
 #mainVisual .mainBanner li h2 {
     font-size: 46px;
     color: #fff;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 #mainVisual .mainBanner li h2 span {
 }
 #mainVisual .mainBanner li h2 + p {
-}
-#mainVisual .mainBanner li h2 + p span {
     font-size: 22px;
     color: #fff;
 }
+#mainVisual .mainBanner li h2 + p span {
+}
 #mainVisual .mainBanner li .more {
+    margin-top: 50px;
+}
+#mainVisual .mainBanner li .more a {
+    display: block;
+    width: 150px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 25px;
+    background: #fff;
+    border: 1px solid #fff;
+    color: #07255d;
 }
 #mainVisual .btn {
     position: absolute;
@@ -439,19 +452,24 @@
     right: 100px;
     top: 50%;
     transform: translateY(-50%);
+    display: none;
+}
+.menu.on {
+    display: block;
 }
 .menu ul {
 }
 .menu ul::after {
     content: '';
     display: block;
-    width: 2px;
+    width: 1px;
     height: 85%;
-    background: #fff;
+    background: #07255d;
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+    z-index: -10;
 }
 .menu ul li {
     font-size: 15px;
