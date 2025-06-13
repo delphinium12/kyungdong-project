@@ -3,43 +3,48 @@ const mainBanner = () => {
     const $bannerli = getAll('#mainVisual .mainBanner li');
     const $prev = get('#mainVisual .prev');
     const $next = get('#mainVisual .next');
+
     let current = 0, //현재번호
         old = 0, // 과거 - 이미 끝난번호
         size = 100, // 100% 처리
         totalImage = $bannerli.length,
         timer = null,
         interval = 5000;
+
     $next.addEventListener('click', (e) => {
         current++;
         if (current > totalImage - 1) current = 0;
-        // banner(true);
+        // banner(true)
         banner('next');
     });
     $prev.addEventListener('click', (e) => {
-        current--;
         if (current < 0) current = totalImage - 1;
-        // banner(false);
+        // banner(false)
         banner('prev');
     });
+
     //공통
-    const banner = (txt) => {
-        const num = txt === 'next' ? size : -size;
-        $bannerli[current].style.transition = '0s';
-        //순간이동
-        $bannerli[current].style.left = `${num}%`;
-        setTimeout(() => {
-            $bannerli[current].style.transition = '0.4s';
-            $bannerli[current].style.left = `0px`;
-            $bannerli[current].style.zIndex = 10;
-            $bannerli[current].classList.add('on');
-            $bannerli[old].style.left = `${num * -1}%`;
-            $bannerli[old].classList.remove('on');
-            $bannerli[old].style.zIndex = 1;
-            old = current; //이미끝난 배너는 과거로 설정
-        }, 20);
+    //글씨 움직임
+    const banner = () => {
+        // 현재는 0의 위치로
+        $bannerli[current].style.left = `0px`;
+        $bannerli[current].style.zIndex = 10;
+        $bannerli[current].classList.add('on');
+        // 과거는 -100%로 이동하기
+        $bannerli[old].style.left = `-${size}%`;
+        $bannerli[old].classList.remove('on');
+        $bannerli[old].style.zIndex = 1;
+
+        lastBanner(old);
+        old = current; //이미끝난 배너는 과거로 설정
     };
 
-    const lastBanner = (z) => {};
+    const lastBanner = (z) => {
+        setTimeout(() => {
+            // 맨앞으로 이동
+            $bannerli[z].style.left = `${size}%`;
+        }, 400); // transition 시간동일
+    };
 };
 //이벤트배너
 const eventBanner = () => {};

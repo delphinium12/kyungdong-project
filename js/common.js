@@ -9,7 +9,19 @@ const preventDefaultAnchor = () => {
 };
 
 const navi = () => {
-    const $gnbli = getAll('#header .nav .gnb li');
+    const $gnbli = getAll('#header .nav .gnb > li');
+    const $nav = get('#header .nav');
+    const $navBar = get('#header .nav-bg');
+    $gnbli.forEach((itemLi) => {
+        itemLi.addEventListener('mouseenter', (e) => {
+            $nav.classList.add('on');
+            $navBar.classList.add('on');
+        });
+    });
+    $nav.addEventListener('mouseleave', (e) => {
+        $nav.classList.remove('on');
+        $navBar.classList.remove('on');
+    });
 };
 const familySite = () => {};
 
